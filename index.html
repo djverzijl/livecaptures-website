@@ -1,0 +1,416 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LiveCaptures — je foto's live bij je gasten, tijdens de shoot</title>
+<meta name="description" content="LiveCaptures verbindt je camera direct met een live galerij. Elke foto: geïmporteerd, bewerkt met jouw preset en online — terwijl je nog aan het fotograferen bent.">
+<link rel="icon" type="image/png" href="data:image/png;base64,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">
+<style>
+:root{
+  --bg:#0a0b0d;
+  --surface:#131519;
+  --surface-2:#1b1e23;
+  --text:#f5f6f7;
+  --muted:#98a1ab;
+  --hairline:#242830;
+  --accent:#6fa8c9;
+  --accent-strong:#8fc0dd;
+  --accent-soft:#152229;
+  --on-accent:#06131a;
+  --maxw:1120px;
+  --radius:14px;
+}
+:root[data-theme="light"]{
+  --bg:#ffffff;
+  --surface:#f4f6f7;
+  --surface-2:#eaedf0;
+  --text:#0c1013;
+  --muted:#5b6570;
+  --hairline:#dfe3e7;
+  --accent:#2e6f95;
+  --accent-strong:#1f5978;
+  --accent-soft:#e7eef2;
+  --on-accent:#ffffff;
+}
+@media (prefers-color-scheme: light){
+  :root:not([data-theme="dark"]){
+    --bg:#ffffff;
+    --surface:#f4f6f7;
+    --surface-2:#eaedf0;
+    --text:#0c1013;
+    --muted:#5b6570;
+    --hairline:#dfe3e7;
+    --accent:#2e6f95;
+    --accent-strong:#1f5978;
+    --accent-soft:#e7eef2;
+    --on-accent:#ffffff;
+  }
+}
+
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",Helvetica,Arial,sans-serif;
+  -webkit-font-smoothing:antialiased;
+  line-height:1.5;
+}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;}
+a{color:inherit;}
+img{max-width:100%;display:block;}
+
+.shell{max-width:var(--maxw);margin:0 auto;padding:0 28px;}
+
+/* Nav */
+header.top{
+  position:sticky;top:0;z-index:20;
+  background:color-mix(in srgb, var(--bg) 86%, transparent);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--hairline);
+}
+.topbar{display:flex;align-items:center;justify-content:space-between;padding:16px 0;}
+.wordmark{font-size:17px;font-weight:650;letter-spacing:-0.01em;display:flex;align-items:center;gap:9px;}
+.wordmark .mark{width:24px;height:24px;border-radius:7px;flex:none;}
+.navlinks{display:flex;gap:28px;font-size:14px;color:var(--muted);}
+.navlinks a:hover{color:var(--text);}
+.cta-small{
+  font-size:14px;font-weight:600;color:var(--on-accent);
+  background:var(--accent);padding:9px 16px;border-radius:999px;text-decoration:none;
+}
+.cta-small:hover{background:var(--accent-strong);}
+@media (max-width:720px){.navlinks{display:none;}}
+
+/* Hero */
+.hero{padding:96px 0 72px;}
+.eyebrow{
+  font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);
+  font-weight:650;margin:0 0 18px;
+}
+h1{
+  font-size:clamp(36px,6vw,60px);
+  line-height:1.04;letter-spacing:-0.03em;font-weight:680;
+  margin:0 0 22px;text-wrap:balance;max-width:16ch;
+}
+h1 em{font-style:normal;color:var(--accent);}
+.lede{font-size:19px;color:var(--muted);max-width:52ch;margin:0 0 36px;}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap;align-items:center;margin-bottom:56px;}
+.cta-primary{
+  background:var(--accent);color:var(--on-accent);font-weight:650;font-size:15.5px;
+  padding:14px 26px;border-radius:999px;text-decoration:none;border:none;cursor:pointer;
+}
+.cta-primary:hover{background:var(--accent-strong);}
+.cta-ghost{
+  font-size:15px;color:var(--text);text-decoration:none;padding:14px 6px;
+  border-bottom:1px solid var(--hairline);
+}
+.cta-ghost:hover{border-color:var(--text);}
+
+/* Live pipeline strip — the thesis visual */
+.pipeline{
+  border:1px solid var(--hairline);
+  background:var(--surface);
+  border-radius:var(--radius);
+  padding:22px;
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:0;
+  overflow-x:auto;
+}
+.pipeline .step{
+  padding:18px 20px;
+  position:relative;
+  border-right:1px solid var(--hairline);
+}
+.pipeline .step:last-child{border-right:none;}
+.pipeline .step .n{
+  font-family:ui-monospace,"SF Mono",Menlo,monospace;
+  font-size:12px;color:var(--muted);
+  font-variant-numeric:tabular-nums;
+}
+.pipeline .step .label{font-size:15px;font-weight:650;margin:6px 0 4px;}
+.pipeline .step .time{font-size:12.5px;color:var(--accent);font-variant-numeric:tabular-nums;}
+.pipeline .step.live .label::after{
+  content:"";display:inline-block;width:6px;height:6px;border-radius:50%;
+  background:var(--accent);margin-left:8px;
+  animation:pulse 1.6s ease-in-out infinite;
+}
+@keyframes pulse{0%,100%{opacity:1;}50%{opacity:.25;}}
+@media (max-width:720px){.pipeline{grid-template-columns:1fr;}.pipeline .step{border-right:none;border-bottom:1px solid var(--hairline);}.pipeline .step:last-child{border-bottom:none;}}
+@media (prefers-reduced-motion:reduce){.pipeline .step.live .label::after{animation:none;}}
+
+/* Sections */
+section{padding:76px 0;border-top:1px solid var(--hairline);}
+.section-head{max-width:60ch;margin-bottom:44px;}
+.section-head .eyebrow{margin-bottom:12px;}
+h2{font-size:clamp(26px,3.4vw,34px);letter-spacing:-0.02em;margin:0 0 14px;text-wrap:balance;font-weight:650;}
+.section-head p{color:var(--muted);font-size:16.5px;margin:0;}
+
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+@media (max-width:860px){.grid3{grid-template-columns:1fr;}}
+.card{
+  border:1px solid var(--hairline);background:var(--surface);border-radius:var(--radius);
+  padding:26px;
+}
+.card .icon{
+  width:36px;height:36px;border-radius:9px;background:var(--accent-soft);
+  display:flex;align-items:center;justify-content:center;margin-bottom:18px;
+  color:var(--accent);font-size:16px;font-weight:700;
+}
+.card h3{font-size:17px;margin:0 0 8px;font-weight:650;}
+.card p{color:var(--muted);font-size:14.5px;margin:0;}
+
+/* How it works — real sequence, numbering earns its place */
+.steps{display:flex;flex-direction:column;}
+.stepline{
+  display:grid;grid-template-columns:56px 1fr;gap:20px;padding:26px 0;
+  border-top:1px solid var(--hairline);
+}
+.stepline:first-child{border-top:none;}
+.stepline .idx{
+  font-family:ui-monospace,"SF Mono",Menlo,monospace;color:var(--accent);
+  font-size:14px;padding-top:2px;
+}
+.stepline h3{margin:0 0 6px;font-size:18px;font-weight:650;}
+.stepline p{margin:0;color:var(--muted);font-size:15px;max-width:56ch;}
+
+/* Pricing teaser */
+.pricing-row{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+@media (max-width:860px){.pricing-row{grid-template-columns:1fr;}}
+.plan{
+  border:1px solid var(--hairline);background:var(--surface);border-radius:var(--radius);
+  padding:28px;display:flex;flex-direction:column;gap:6px;
+}
+.plan.featured{border-color:var(--accent);background:var(--accent-soft);}
+.plan .tier{font-size:13px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);font-weight:650;}
+.plan .storage{font-size:30px;font-weight:680;letter-spacing:-0.02em;margin:4px 0 2px;}
+.plan .storage span{font-size:14px;color:var(--muted);font-weight:500;}
+.plan .desc{color:var(--muted);font-size:14px;margin-top:8px;}
+
+/* Final CTA */
+.closer{
+  border-top:1px solid var(--hairline);
+  padding:80px 0 90px;text-align:left;
+}
+.closer h2{max-width:20ch;}
+.form-row{
+  display:flex;gap:10px;flex-wrap:wrap;max-width:460px;margin-top:28px;
+}
+.form-row input[type=email]{
+  flex:1 1 240px;
+  background:var(--surface);border:1px solid var(--hairline);color:var(--text);
+  padding:13px 16px;border-radius:10px;font-size:15px;min-width:0;
+}
+.form-row input[type=email]:focus{outline:2px solid var(--accent);outline-offset:1px;}
+.form-note{font-size:12.5px;color:var(--muted);margin-top:12px;}
+
+footer{border-top:1px solid var(--hairline);padding:32px 0;}
+.footrow{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;color:var(--muted);font-size:13px;}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="shell topbar">
+    <div class="wordmark">
+      <svg class="mark" viewBox="0 0 512 512" role="img" aria-label="LiveCaptures logo">
+        <rect width="512" height="512" rx="112" fill="#0a0d10"/>
+        <g transform="translate(256,256)">
+          <path d="M0,-118 A118,118 0 0,1 102.2,-59 L54,-31 A62,62 0 0,0 0,-62 Z" fill="#8fc0dd"/>
+          <path d="M102.2,-59 A118,118 0 0,1 102.2,59 L54,31 A62,62 0 0,0 54,-31 Z" fill="#6fa8c9"/>
+          <path d="M102.2,59 A118,118 0 0,1 0,118 L0,62 A62,62 0 0,0 54,31 Z" fill="#4f8bad"/>
+          <path d="M0,118 A118,118 0 0,1 -102.2,59 L-54,31 A62,62 0 0,0 0,62 Z" fill="#3a7191"/>
+          <path d="M-102.2,59 A118,118 0 0,1 -102.2,-59 L-54,-31 A62,62 0 0,0 -54,31 Z" fill="#2e6f95"/>
+          <path d="M-102.2,-59 A118,118 0 0,1 0,-118 L0,-62 A62,62 0 0,0 -54,-31 Z" fill="#255c7c"/>
+          <circle cx="0" cy="0" r="16" fill="#f5f6f7"/>
+        </g>
+      </svg>
+      LiveCaptures
+    </div>
+    <nav class="navlinks">
+      <a href="#hoe-het-werkt">Hoe het werkt</a>
+      <a href="#features">Features</a>
+      <a href="#prijzen">Prijzen</a>
+    </nav>
+    <a class="cta-small" href="#early-access">Vroege toegang</a>
+  </div>
+</header>
+
+<main>
+<section class="hero" aria-labelledby="hero-title">
+  <div class="shell">
+    <p class="eyebrow">Voor fotografen op locatie</p>
+    <h1 id="hero-title">Je foto's staan online <em>voordat</em> de shoot voorbij is.</h1>
+    <p class="lede">LiveCaptures verbindt je camera rechtstreeks met een live galerij. Elke foto wordt geïmporteerd, bewerkt met jouw eigen preset en gepubliceerd — terwijl jij nog aan het fotograferen bent. Geen kabels naar een laptop op een tafeltje, geen handmatig exporteren achteraf.</p>
+    <div class="hero-actions">
+      <a class="cta-primary" href="#early-access">Zet me op de lijst</a>
+      <a class="cta-ghost" href="#hoe-het-werkt">Zie hoe het werkt ↓</a>
+    </div>
+
+    <div class="pipeline" role="img" aria-label="Pijplijnstatus: binnenkomend, bewerken, live, bekeken door gasten">
+      <div class="step">
+        <div class="n">01</div>
+        <div class="label">Binnenkomend</div>
+        <div class="time">_DSC4821.CR3</div>
+      </div>
+      <div class="step">
+        <div class="n">02</div>
+        <div class="label">Bewerken</div>
+        <div class="time">preset "Celeste" · 0,9s</div>
+      </div>
+      <div class="step live">
+        <div class="n">03</div>
+        <div class="label">Live</div>
+        <div class="time">gallery.livecaptures.nl</div>
+      </div>
+      <div class="step">
+        <div class="n">04</div>
+        <div class="label">Bekeken</div>
+        <div class="time">14 gasten nu</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="hoe-het-werkt" aria-labelledby="how-title">
+  <div class="shell">
+    <div class="section-head">
+      <p class="eyebrow">Hoe het werkt</p>
+      <h2 id="how-title">Drie dingen die normaal apart gebeuren, gebeuren nu automatisch.</h2>
+      <p>Geen losse import-sessie, geen aparte Lightroom-export, geen los delen achteraf. Eén verbinding, van sluiter tot scherm van je klant.</p>
+    </div>
+    <div class="steps">
+      <div class="stepline">
+        <div class="idx">01</div>
+        <div>
+          <h3>Camera verbindt draadloos met LiveCaptures</h3>
+          <p>Je camera stuurt elke foto direct door zodra je 'm maakt — geen kaartje wisselen, geen kabel. Werkt met de FTP-functie die de meeste moderne camera's al aan boord hebben.</p>
+        </div>
+      </div>
+      <div class="stepline">
+        <div class="idx">02</div>
+        <div>
+          <h3>Automatische bewerking met jouw eigen stijl</h3>
+          <p>LiveCaptures past jouw Lightroom-presets toe zodra een foto binnenkomt — inclusief je eigen watermerk of klant-frame. Geen twee stijlen door elkaar, geen handwerk per foto.</p>
+        </div>
+      </div>
+      <div class="stepline">
+        <div class="idx">03</div>
+        <div>
+          <h3>Live galerij, direct deelbaar</h3>
+          <p>De galerij groeit mee tijdens de shoot. Klant en gasten zien nieuwe foto's binnen seconden verschijnen — via een link of QR-code die je al vóór de shoot kunt klaarzetten.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="features" aria-labelledby="features-title">
+  <div class="shell">
+    <div class="section-head">
+      <p class="eyebrow">Waarom fotografen overstappen</p>
+      <h2 id="features-title">Gebouwd voor de chaos van een echte shoot, niet voor een studio-demo.</h2>
+    </div>
+    <div class="grid3">
+      <div class="card">
+        <div class="icon">◐</div>
+        <h3>Werkt overal</h3>
+        <p>Op locatie zonder vast netwerk? LiveCaptures schakelt naadloos tussen lokaal wifi en een remote-verbinding — jij hoeft niets in te stellen.</p>
+      </div>
+      <div class="card">
+        <div class="icon">↺</div>
+        <h3>Project hervatten</h3>
+        <p>Shoot onderbroken of laptop dicht geweest? Open het project gewoon opnieuw en werk verder waar je gebleven was.</p>
+      </div>
+      <div class="card">
+        <div class="icon">⌗</div>
+        <h3>Alles vooraf klaar</h3>
+        <p>Galerij, QR-code, watermerk en klantframe stel je al in vóór de shoot begint — en test je zelf, zodat er niets misgaat op locatie.</p>
+      </div>
+      <div class="card">
+        <div class="icon">⚠</div>
+        <h3>Je ziet fouten meteen</h3>
+        <p>Een corrupt bestand of een wegvallende verbinding zie je direct in beeld — niet pas als je 's avonds je kaartje leegtrekt.</p>
+      </div>
+      <div class="card">
+        <div class="icon">🔒</div>
+        <h3>Privacy-first</h3>
+        <p>RAW-bestanden blijven van jou. Alleen de bewerkte, gepubliceerde foto gaat de deur uit naar de galerij.</p>
+      </div>
+      <div class="card">
+        <div class="icon">▤</div>
+        <h3>Eén overzicht</h3>
+        <p>Verbindingsstatus, batterij, opslag en de status van elke foto in de pijplijn — in één blik, tijdens de shoot.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="prijzen" aria-labelledby="pricing-title">
+  <div class="shell">
+    <div class="section-head">
+      <p class="eyebrow">Prijzen</p>
+      <h2 id="pricing-title">Betaal voor opslag, niet voor gedoe.</h2>
+      <p>Gelaagde abonnementen op basis van galerij-opslag. Exacte prijzen volgen bij lancering — vroege aanmelders krijgen die als eerste te zien, met een founder-korting.</p>
+    </div>
+    <div class="pricing-row">
+      <div class="plan">
+        <span class="tier">Starter</span>
+        <div class="storage">50<span> GB</span></div>
+        <p class="desc">Voor losse shoots en kleinere events.</p>
+      </div>
+      <div class="plan featured">
+        <span class="tier">Studio</span>
+        <div class="storage">200<span> GB</span></div>
+        <p class="desc">Voor fotografen die wekelijks meerdere shoots draaien.</p>
+      </div>
+      <div class="plan">
+        <span class="tier">Studio+</span>
+        <div class="storage">1<span> TB</span></div>
+        <p class="desc">Voor studio's en teams met veel gelijktijdige projecten.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="closer" id="early-access" aria-labelledby="closer-title">
+  <div class="shell">
+    <p class="eyebrow">Vroege toegang</p>
+    <h2 id="closer-title">Zet je op de lijst voordat we live gaan.</h2>
+    <p class="lede" style="margin-bottom:0;">Vroege aanmelders krijgen als eerste toegang en een founder-prijs op hun abonnement.</p>
+    <form class="form-row" id="signup-form">
+      <label class="sr-only" for="email">E-mailadres</label>
+      <input id="email" type="email" name="email" placeholder="jij@studio.nl" required>
+      <button class="cta-primary" type="submit">Aanmelden</button>
+    </form>
+    <p class="form-note" id="signup-note">Geen spam. Eén mail zodra LiveCaptures beschikbaar is.</p>
+    <script>
+      /* Tijdelijke opvang tot LiveCaptures een eigen backend/database heeft:
+         opent een voorgevulde mail naar het teamadres i.p.v. aanmeldingen
+         stil te laten verdwijnen. Vervang door een echte endpoint zodra die
+         infra er is. */
+      document.getElementById('signup-form').addEventListener('submit', function (e) {
+        e.preventDefault();
+        var email = document.getElementById('email').value.trim();
+        if (!email) return;
+        var subject = encodeURIComponent('LiveCaptures — vroege toegang');
+        var body = encodeURIComponent('Meld dit e-mailadres aan voor vroege toegang tot LiveCaptures:\n\n' + email);
+        window.location.href = 'mailto:djverzijl@gmail.com?subject=' + subject + '&body=' + body;
+        document.getElementById('signup-note').textContent = 'Je mail-app opent zo met je aanmelding klaar om te versturen.';
+      });
+    </script>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="shell footrow">
+    <span>© 2026 LiveCaptures</span>
+    <span>livecaptures.nl</span>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+name: Deploy to Hetzner
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install sshpass
+        run: sudo apt-get install -y sshpass
+
+      - name: Setup repo + container (eenmalig, idempotent)
+        env:
+          HETZNER_PASS: ${{ secrets.HETZNER_SSH_PASSWORD }}
+          GITHUB_PAT: ${{ secrets.DEPLOY_PAT }}
+        run: |
+          sshpass -p "$HETZNER_PASS" ssh -o StrictHostKeyChecking=no root@46.225.212.58 "
+            if [ ! -d /opt/livecaptures-website-repo/.git ]; then
+              git clone https://${GITHUB_PAT}@github.com/djverzijl/livecaptures-website.git /opt/livecaptures-website-repo
+              echo 'Repo gekloned'
+            fi
+
+            # Netwerk: ibrave-os_default  |  Poort: 8084
+            if ! docker ps -a --format '{{.Names}}' | grep -q '^livecaptures-website$'; then
+              docker run -d \
+                --name livecaptures-website \
+                --network ibrave-os_default \
+                -p 8084:80 \
+                -v /opt/livecaptures-website-repo:/usr/share/nginx/html:ro \
+                --restart unless-stopped \
+                nginx:alpine
+              echo 'Container livecaptures-website aangemaakt op poort 8084'
+            fi
+          "
+
+      - name: Git pull (deploy)
+        env:
+          HETZNER_PASS: ${{ secrets.HETZNER_SSH_PASSWORD }}
+          GITHUB_PAT: ${{ secrets.DEPLOY_PAT }}
+        run: |
+          sshpass -p "$HETZNER_PASS" ssh -o StrictHostKeyChecking=no root@46.225.212.58 "
+            cd /opt/livecaptures-website-repo && \
+            git remote set-url origin https://${GITHUB_PAT}@github.com/djverzijl/livecaptures-website.git && \
+            git fetch origin main && \
+            git reset --hard origin/main
+          "
+
+      - name: Verify
+        env:
+          HETZNER_PASS: ${{ secrets.HETZNER_SSH_PASSWORD }}
+        run: |
+          STATUS=$(sshpass -p "$HETZNER_PASS" ssh -o StrictHostKeyChecking=no root@46.225.212.58 "curl -s -o /dev/null -w '%{http_code}' http://localhost:8084")
+          echo "HTTP status localhost:8084: $STATUS"
