@@ -484,6 +484,15 @@ footer{border-top:1px solid var(--hairline);padding:32px 0;}
 </section>
 </main>
 
+<script>
+  /* Privacyvriendelijke meting: geen cookies, alleen een anonieme paginaweergave
+     naar het eigen LiveCaptures-backend (admin.livecaptures.nl). */
+  try {
+    navigator.sendBeacon('https://admin.livecaptures.nl/api/track',
+      new Blob([JSON.stringify({ path: location.pathname, referrer: document.referrer || null })], { type: 'text/plain' }));
+  } catch (e) { /* meting mag nooit de pagina breken */ }
+</script>
+
 <footer>
   <div class="shell footrow">
     <span>© 2026 LiveCaptures</span>
