@@ -205,6 +205,13 @@ h2{font-size:clamp(26px,3.4vw,34px);letter-spacing:-0.02em;margin:0 0 14px;text-
 }
 .form-row input[type=email]:focus{outline:2px solid var(--accent);outline-offset:1px;}
 .form-note{font-size:12.5px;color:var(--muted);margin-top:12px;}
+.faq-list{max-width:760px;}
+.faq-list details{border-bottom:1px solid var(--line,#e3e9ee);padding:14px 0;}
+.faq-list summary{cursor:pointer;font-weight:650;font-size:16px;list-style:none;position:relative;padding-right:28px;}
+.faq-list summary::-webkit-details-marker{display:none;}
+.faq-list summary::after{content:'+';position:absolute;right:2px;top:0;color:var(--accent);font-weight:400;font-size:20px;line-height:1;}
+.faq-list details[open] summary::after{content:'–';}
+.faq-list details p{margin-top:10px;color:var(--muted);line-height:1.6;}
 
 footer{border-top:1px solid var(--hairline);padding:32px 0;}
 .footrow{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;color:var(--muted);font-size:13px;}
@@ -348,6 +355,33 @@ footer{border-top:1px solid var(--hairline);padding:32px 0;}
   </div>
 </section>
 
+<section id="voor-wie" aria-labelledby="who-title">
+  <div class="shell">
+    <div class="section-head">
+      <p class="eyebrow">Voor wie</p>
+      <h2 id="who-title">Gemaakt voor fotografen bij wie het móet werken, nu meteen.</h2>
+      <p>LiveCaptures is er voor iedereen die fotografeert op momenten die niet overgedaan kunnen worden — en die klanten wil verrassen terwijl het feest nog bezig is.</p>
+    </div>
+    <div class="grid3">
+      <div class="card">
+        <div class="icon">💍</div>
+        <h3>Bruiloftsfotografen</h3>
+        <p>Gasten scannen de QR-code bij het diner en zien de ceremonie al terug — in jouw stijl bewerkt. De mooiste marketing die er is: je werk gaat rond terwijl je nog aan het schieten bent.</p>
+      </div>
+      <div class="card">
+        <div class="icon">🎪</div>
+        <h3>Event- en festivalfotografen</h3>
+        <p>Organisatoren willen content tijdens het event, niet een week later. Lever een live galerij als onderdeel van je pakket en onderscheid je van elke andere offerte.</p>
+      </div>
+      <div class="card">
+        <div class="icon">🏟</div>
+        <h3>Sport- en congresfotografen</h3>
+        <p>Sponsoren, sprekers en deelnemers direct bedienen met bewerkt materiaal — zonder een tweede persoon die achter een laptop zit te slepen en exporteren.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section id="prijzen" aria-labelledby="pricing-title">
   <div class="shell">
     <div class="section-head">
@@ -375,6 +409,41 @@ footer{border-top:1px solid var(--hairline);padding:32px 0;}
   </div>
 </section>
 
+<section id="faq" aria-labelledby="faq-title">
+  <div class="shell">
+    <div class="section-head">
+      <p class="eyebrow">Veelgestelde vragen</p>
+      <h2 id="faq-title">Nog even praktisch.</h2>
+    </div>
+    <div class="faq-list">
+      <details>
+        <summary>Werkt dit met mijn camera?</summary>
+        <p>LiveCaptures gebruikt de ingebouwde FTP-verzendfunctie van je camera. Vrijwel alle recente Canon-, Nikon- en Sony-body's hebben die aan boord; de app bevat per model een stappenplan voor de instellingen.</p>
+      </details>
+      <details>
+        <summary>Moet mijn klant iets installeren?</summary>
+        <p>Nee. De galerij is een gewone webpagina — link of QR-code openen is genoeg, op elke telefoon of laptop. Nieuwe foto's verschijnen vanzelf, zonder verversen.</p>
+      </details>
+      <details>
+        <summary>Hoe zit het met mijn bewerkingsstijl?</summary>
+        <p>Je gebruikt je eigen Lightroom-presets. LiveCaptures kan zelfs Lightroom Classic zelf als rendermotor gebruiken, zodat elke live-foto exact jouw bewerking krijgt — en meteen in je catalogus staat voor de nabewerking achteraf.</p>
+      </details>
+      <details>
+        <summary>Wat gebeurt er met mijn RAW-bestanden?</summary>
+        <p>Die blijven op jouw computer. Alleen de bewerkte, gepubliceerde JPEG gaat naar de galerij. Geen cloud-upload van je originelen, geen verrassingen.</p>
+      </details>
+      <details>
+        <summary>En als het internet op locatie wegvalt?</summary>
+        <p>De verwerking draait lokaal op je laptop en gaat gewoon door. Zodra de verbinding terug is, synchroniseert de galerij automatisch bij. Fouten zie je direct in het dashboard.</p>
+      </details>
+      <details>
+        <summary>Wanneer is LiveCaptures beschikbaar?</summary>
+        <p>We draaien nu de laatste tests op echte shoots. Zet je op de lijst hieronder — vroege aanmelders krijgen als eerste toegang en een founder-prijs.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
 <section class="closer" id="early-access" aria-labelledby="closer-title">
   <div class="shell">
     <p class="eyebrow">Vroege toegang</p>
@@ -387,18 +456,28 @@ footer{border-top:1px solid var(--hairline);padding:32px 0;}
     </form>
     <p class="form-note" id="signup-note">Geen spam. Eén mail zodra LiveCaptures beschikbaar is.</p>
     <script>
-      /* Tijdelijke opvang tot LiveCaptures een eigen backend/database heeft:
-         opent een voorgevulde mail naar het teamadres i.p.v. aanmeldingen
-         stil te laten verdwijnen. Vervang door een echte endpoint zodra die
-         infra er is. */
-      document.getElementById('signup-form').addEventListener('submit', function (e) {
+      document.getElementById('signup-form').addEventListener('submit', async function (e) {
         e.preventDefault();
+        var note = document.getElementById('signup-note');
+        var btn = this.querySelector('button');
         var email = document.getElementById('email').value.trim();
         if (!email) return;
-        var subject = encodeURIComponent('LiveCaptures — vroege toegang');
-        var body = encodeURIComponent('Meld dit e-mailadres aan voor vroege toegang tot LiveCaptures:\n\n' + email);
-        window.location.href = 'mailto:djverzijl@gmail.com?subject=' + subject + '&body=' + body;
-        document.getElementById('signup-note').textContent = 'Je mail-app opent zo met je aanmelding klaar om te versturen.';
+        btn.disabled = true;
+        note.textContent = 'Even geduld…';
+        try {
+          var r = await fetch('https://admin.livecaptures.nl/api/signup', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ email: email })
+          });
+          var d = await r.json();
+          note.textContent = d.message || (r.ok ? 'Je staat op de lijst!' : 'Er ging iets mis, probeer het later opnieuw.');
+          if (r.ok && d.ok) document.getElementById('email').value = '';
+        } catch (err) {
+          note.textContent = 'Er ging iets mis, probeer het later opnieuw.';
+        } finally {
+          btn.disabled = false;
+        }
       });
     </script>
   </div>
