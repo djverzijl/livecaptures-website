@@ -13,8 +13,10 @@
 - Roadmap (volgorde, zonder datums): 1. nu: live pijplijn camera → Lightroom; 2. hierna:
   live klantgalerij met QR-code; 3. later: gasten-galerij en live op een groot scherm (ook
   voor clubs/kroegen); 4. later: automatische bewerking in de eigen stijl; 5. later: Windows.
-- Prijs: €19,99 per maand excl. btw voor de live pijplijn (camera → Lightroom), maandelijks
-  opzegbaar. Prijzen voor de onderdelen op de roadmap volgen later.
+- Prijs: €19,99 per maand excl. btw voor de live pijplijn (camera → Lightroom). Eerst 14
+  dagen gratis proberen zonder betaalgegevens; daarna maandelijks opzegbaar zonder
+  opzegtermijn. Alleen voor zakelijk gebruik. Prijzen voor de onderdelen op de roadmap
+  volgen later.
 - Status: nog niet algemeen beschikbaar, in laatste testfase op echte shoots. Aanmelden via
   de wachtlijst op de homepage.
 
@@ -22,6 +24,7 @@
 - [Homepage](https://livecaptures.nl/): productuitleg, features, roadmap, prijzen, FAQ, wachtlijst.
 - [Privacybeleid](https://livecaptures.nl/privacy.html)
 - [Algemene voorwaarden](https://livecaptures.nl/voorwaarden.html)
+- [Opzeggen en restitutie](https://livecaptures.nl/opzeggen.html)
 
 ## Contact
 - E-mail: djverzijl@gmail.com
