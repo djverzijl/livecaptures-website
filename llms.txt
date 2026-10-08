@@ -13,9 +13,8 @@
 - Roadmap (volgorde, zonder datums): 1. nu: live pijplijn camera → Lightroom; 2. hierna:
   live klantgalerij met QR-code; 3. later: gasten-galerij en live op een groot scherm (ook
   voor clubs/kroegen); 4. later: automatische bewerking in de eigen stijl; 5. later: Windows.
-- Prijzen: abonnementen voor de live galerij (nog niet beschikbaar) op basis van opslag:
-  Starter (50GB, €29/mnd), Studio (200GB, €59/mnd), Studio+ (1TB, €149/mnd). De prijs van
-  de eerste versie wordt bij de lancering bekendgemaakt.
+- Prijs: €19,99 per maand excl. btw voor de live pijplijn (camera → Lightroom), maandelijks
+  opzegbaar. Prijzen voor de onderdelen op de roadmap volgen later.
 - Status: nog niet algemeen beschikbaar, in laatste testfase op echte shoots. Aanmelden via
   de wachtlijst op de homepage.
 

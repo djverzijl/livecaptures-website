@@ -320,6 +320,7 @@ h2{font-family:var(--font-head);font-weight:400;text-transform:uppercase;font-si
 
 /* Pricing teaser */
 .pricing-row{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+.pricing-row.single{grid-template-columns:minmax(0,360px);}
 @media (max-width:860px){.pricing-row{grid-template-columns:1fr;}}
 .plan{
   border:1px solid var(--hairline);background:var(--surface);border-radius:var(--radius);
@@ -645,27 +646,15 @@ footer{border-top:1px solid var(--hairline);padding:32px 0;}
   <div class="shell">
     <div class="section-head">
       <p class="eyebrow">Prijzen</p>
-      <h2 id="pricing-title">Betaal voor opslag, niet voor gedoe.</h2>
-      <p>Deze abonnementen horen bij de live galerij, de volgende stap op de <a href="#roadmap">roadmap</a>. De prijs van de eerste versie (camera → Lightroom) maken we bekend bij de lancering. Vroege aanmelders krijgen een founder-korting.</p>
+      <h2 id="pricing-title">Eén prijs, geen gedoe.</h2>
+      <p>Eén abonnement voor de live pijplijn, maandelijks opzegbaar. Vroege aanmelders krijgen een founder-korting.</p>
     </div>
-    <div class="pricing-row">
-      <div class="plan">
-        <span class="tier">Starter</span>
-        <div class="storage">50<span> GB</span></div>
-        <p class="price">&euro;29<span>/maand</span></p>
-        <p class="desc">Voor losse shoots en kleinere events.</p>
-      </div>
+    <div class="pricing-row single">
       <div class="plan featured">
-        <span class="tier">Studio</span>
-        <div class="storage">200<span> GB</span></div>
-        <p class="price">&euro;59<span>/maand</span></p>
-        <p class="desc">Voor fotografen die wekelijks meerdere shoots draaien.</p>
-      </div>
-      <div class="plan">
-        <span class="tier">Studio+</span>
-        <div class="storage">1<span> TB</span></div>
-        <p class="price">&euro;149<span>/maand</span></p>
-        <p class="desc">Voor studio's en teams met veel gelijktijdige projecten.</p>
+        <span class="tier">Live pijplijn</span>
+        <div class="storage">&euro;19,99<span> /maand</span></div>
+        <p class="price"><span>excl. btw</span></p>
+        <p class="desc">Draadloos van camera naar Lightroom Classic, met jouw preset. Voor Mac.</p>
       </div>
     </div>
   </div>
