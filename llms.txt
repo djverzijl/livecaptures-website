@@ -1,25 +1,25 @@
 # LiveCaptures
 
 > LiveCaptures is een macOS-app voor bruilofts-, event- en sportfotografen die de camera
-> draadloos (via FTP) verbindt met een live online galerij. Elke foto wordt automatisch
-> bewerkt met de eigen Lightroom-presets van de fotograaf en verschijnt binnen seconden in
-> een deelbare klantgalerij met QR-code — terwijl de fotograaf nog aan het fotograferen is.
-> RAW-bestanden blijven altijd lokaal bij de fotograaf (privacy-first). Lanceert eerst op
-> Mac, een Windows-versie volgt later.
+> draadloos (via FTP) verbindt met Lightroom Classic. Elke foto komt tijdens de shoot
+> automatisch binnen in de eigen catalogus van de fotograaf, met diens eigen preset.
+> Bestanden blijven lokaal bij de fotograaf (privacy-first). Lanceert eerst op Mac.
 
 ## Belangrijkste feiten
 - Doelgroep: professionele bruilofts-, event- en sportfotografen.
 - Werkt met de ingebouwde FTP-verzendfunctie van recente Canon-, Nikon- en Sony-camera's.
-- Klanten/gasten hoeven niets te installeren — een gewone webpagina via link of QR-code.
-- Gebruikt de eigen Lightroom-presets van de fotograaf, optioneel via Lightroom Classic zelf.
-- Prijzen op basis van galerij-opslag: Starter (50GB, €29/mnd), Studio (200GB, €59/mnd),
-  Studio+ (1TB, €149/mnd). Losstaand pakket voor clubs/kroegen/evenementenlocaties zonder
-  fotograaf (schermen met live gasten-foto's).
+- Vereist Lightroom Classic; gebruikt de functie "Automatisch importeren" en de preset die
+  de fotograaf daar zelf kiest.
+- Roadmap (volgorde, zonder datums): 1. nu: live pijplijn camera → Lightroom; 2. hierna:
+  live klantgalerij met QR-code; 3. later: gasten-galerij en live op een groot scherm (ook
+  voor clubs/kroegen); 4. later: automatische bewerking in de eigen stijl; 5. later: Windows.
+- Prijs: €19,99 per maand excl. btw voor de live pijplijn (camera → Lightroom), maandelijks
+  opzegbaar. Prijzen voor de onderdelen op de roadmap volgen later.
 - Status: nog niet algemeen beschikbaar, in laatste testfase op echte shoots. Aanmelden via
   de wachtlijst op de homepage.
 
 ## Pagina's
-- [Homepage](https://livecaptures.nl/): productuitleg, features, prijzen, FAQ, wachtlijst.
+- [Homepage](https://livecaptures.nl/): productuitleg, features, roadmap, prijzen, FAQ, wachtlijst.
 - [Privacybeleid](https://livecaptures.nl/privacy.html)
 - [Algemene voorwaarden](https://livecaptures.nl/voorwaarden.html)
 
