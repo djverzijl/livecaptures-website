@@ -4,13 +4,22 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZJ82MLXF6F"></script>
+<!-- Google Analytics: wordt pas geladen ná toestemming in de cookiemelding onderaan de pagina. -->
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-ZJ82MLXF6F');
+  function loadGoogleAnalytics() {
+    if (window.lcGaLoaded) return;
+    window.lcGaLoaded = true;
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=G-ZJ82MLXF6F';
+    document.head.appendChild(s);
+    gtag('js', new Date());
+    gtag('config', 'G-ZJ82MLXF6F');
+  }
+  function lcConsent() { try { return localStorage.getItem('lc-cookies'); } catch (e) { return null; } }
+  if (lcConsent() === 'ja') loadGoogleAnalytics();
 </script>
 
 <title>LiveCaptures — van camera direct in Lightroom, draadloos tijdens je shoot</title>
@@ -99,6 +108,16 @@
           "@type": "Question",
           "name": "Komt er een live galerij voor mijn klanten?",
           "acceptedAnswer": { "@type": "Answer", "text": "Ja, dat is de volgende stap op de roadmap: foto's tijdens de shoot online, deelbaar met één link of QR-code. We brengen hem uit zodra hij net zo betrouwbaar is als de pijplijn zelf." }
+        },
+        {
+          "@type": "Question",
+          "name": "Kan ik het eerst proberen?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Ja. Je kunt LiveCaptures 14 dagen gratis en volledig gebruiken, zonder betaalgegevens op te geven. Start je daarna geen abonnement, dan wordt er niets afgeschreven; de app ontvangt dan alleen geen nieuwe foto's meer." }
+        },
+        {
+          "@type": "Question",
+          "name": "Hoe zeg ik op?",
+          "acceptedAnswer": { "@type": "Answer", "text": "In je account, met één klik en zonder opzegtermijn. Er wordt daarna niets meer afgeschreven en je houdt toegang tot het einde van de maand waarvoor je al betaald hebt." }
         },
         {
           "@type": "Question",
@@ -387,6 +406,13 @@ h2{font-family:var(--font-head);font-weight:400;text-transform:uppercase;font-si
 .cc-result p{color:var(--text);margin:0;}
 
 footer{border-top:1px solid var(--hairline);padding:32px 0;}
+footer a{color:var(--muted);}
+.cookie-bar{position:fixed;left:16px;right:16px;bottom:16px;z-index:50;max-width:720px;margin:0 auto;background:var(--bg);border:1px solid var(--hairline);border-radius:var(--radius);box-shadow:0 24px 50px -20px rgba(14,20,32,.35);padding:18px 20px;display:flex;gap:16px;align-items:center;flex-wrap:wrap;}
+.cookie-bar.hidden{display:none;}
+.cookie-bar p{margin:0;font-size:14px;color:var(--muted);flex:1 1 280px;}
+.cookie-actions{display:flex;gap:10px;align-items:center;flex-wrap:wrap;}
+.cookie-actions .cta-primary{padding:11px 22px;font-size:13.5px;}
+.cookie-actions .cta-ghost{padding:10px 4px;font-size:13.5px;background:none;border:none;border-bottom:2px solid var(--hairline);cursor:pointer;font-family:inherit;}
 .footrow{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;color:var(--muted);font-size:13px;}
 </style>
 </head>
@@ -647,14 +673,14 @@ footer{border-top:1px solid var(--hairline);padding:32px 0;}
     <div class="section-head">
       <p class="eyebrow">Prijzen</p>
       <h2 id="pricing-title">Eén prijs, geen gedoe.</h2>
-      <p>Eén abonnement voor de live pijplijn, maandelijks opzegbaar. Vroege aanmelders krijgen een founder-korting.</p>
+      <p>Probeer LiveCaptures 14 dagen gratis, zonder betaalgegevens. Daarna één abonnement, <a href="/opzeggen.html">maandelijks opzegbaar</a>. Vroege aanmelders krijgen een founder-korting.</p>
     </div>
     <div class="pricing-row single">
       <div class="plan featured">
         <span class="tier">Live pijplijn</span>
         <div class="storage">&euro;19,99<span> /maand</span></div>
         <p class="price"><span>excl. btw</span></p>
-        <p class="desc">Draadloos van camera naar Lightroom Classic, met jouw preset. Voor Mac.</p>
+        <p class="desc">Draadloos van camera naar Lightroom Classic, met jouw preset. Voor Mac. Eerst 14 dagen gratis; voor zakelijk gebruik.</p>
       </div>
     </div>
   </div>
@@ -694,6 +720,14 @@ footer{border-top:1px solid var(--hairline);padding:32px 0;}
       <details>
         <summary>Kunnen gasten ook foto's toevoegen?</summary>
         <p>Nog niet. Een gasten-galerij met eigen QR-code en een live scherm op locatie staan op de roadmap.</p>
+      </details>
+      <details>
+        <summary>Kan ik het eerst proberen?</summary>
+        <p>Ja. Je kunt LiveCaptures 14 dagen gratis en volledig gebruiken, zonder betaalgegevens op te geven. Start je daarna geen abonnement, dan wordt er niets afgeschreven; de app ontvangt dan alleen geen nieuwe foto's meer.</p>
+      </details>
+      <details>
+        <summary>Hoe zeg ik op?</summary>
+        <p>In je account, met één klik en zonder opzegtermijn. Er wordt daarna niets meer afgeschreven en je houdt toegang tot het einde van de maand waarvoor je al betaald hebt.</p>
       </details>
       <details>
         <summary>Hoe installeer ik de app?</summary>
@@ -894,10 +928,33 @@ footer{border-top:1px solid var(--hairline);padding:32px 0;}
 
 <footer>
   <div class="shell footrow">
-    <span>© 2026 LiveCaptures</span>
-    <span><a href="/privacy.html">Privacybeleid</a> · <a href="/voorwaarden.html">Algemene voorwaarden</a> · livecaptures.nl</span>
+    <span>© 2026 LiveCaptures — een dienst van Ibrave Media</span>
+    <span><a href="/voorwaarden.html">Algemene voorwaarden</a> · <a href="/privacy.html">Privacybeleid</a> · <a href="/opzeggen.html">Opzeggen en restitutie</a> · <a href="#" id="cookie-settings">Cookie-instellingen</a></span>
   </div>
 </footer>
+
+<div class="cookie-bar hidden" id="cookie-bar" role="dialog" aria-label="Cookies">
+  <p>We tellen bezoeken anoniem, zonder cookies. Mogen we daarnaast Google Analytics gebruiken om de site te verbeteren? <a href="/privacy.html">Meer in het privacybeleid</a>.</p>
+  <div class="cookie-actions">
+    <button type="button" class="cta-ghost" id="cookie-no">Nee, liever niet</button>
+    <button type="button" class="cta-primary" id="cookie-yes">Akkoord</button>
+  </div>
+</div>
+<script>
+  (function () {
+    var bar = document.getElementById('cookie-bar');
+    function choose(value) {
+      try { localStorage.setItem('lc-cookies', value); } catch (e) {}
+      bar.classList.add('hidden');
+      if (value === 'ja') loadGoogleAnalytics();
+      else if (window.lcGaLoaded) location.reload(); // toestemming ingetrokken: Analytics niet opnieuw laden
+    }
+    document.getElementById('cookie-yes').addEventListener('click', function () { choose('ja'); });
+    document.getElementById('cookie-no').addEventListener('click', function () { choose('nee'); });
+    document.getElementById('cookie-settings').addEventListener('click', function (e) { e.preventDefault(); bar.classList.remove('hidden'); });
+    if (!lcConsent()) bar.classList.remove('hidden');
+  })();
+</script>
 
 </body>
 </html>
